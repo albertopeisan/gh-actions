@@ -29,5 +29,5 @@ jobs:
           gh issue create --title "Issue report" --body $EVENT --repo $GITHUB_REPOSITORY
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EVENT: ${{ github.event }}
+          EVENT: ${{ toJson(github.event) }}
 
