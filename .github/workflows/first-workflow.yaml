@@ -6,6 +6,7 @@ on:
 permissions:
   checks: write
   contents: write
+  issues: write
 jobs:
   lint:
     name: Run linters
@@ -27,5 +28,3 @@ jobs:
           echo "Deploying..."
       - run: |
           gh issue create --title "Issue report" --body "there has been a problem." --repo $GITHUB_REPOSITORY
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
