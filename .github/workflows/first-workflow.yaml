@@ -26,7 +26,8 @@ jobs:
         run: |
           echo "Deploying..."
       - run: |
-          gh issue create --title "Issue report" --body ${{ toJson(github.event) }} --repo $GITHUB_REPOSITORY
+          gh issue create --title "Issue report" --body $EVENT --repo $GITHUB_REPOSITORY
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT: ${{ github.event }}
 
