@@ -24,7 +24,7 @@ jobs:
       - name: Run server
         run: echo "http://$ADDRESS:$PORT"
       - name: Run server 2
-        run: echo "http://${{ env.ADDRESS}}:${{ env.PORT }}"
+        run: echo "http://${{ env.ADDRESS }}:${{ env.PORT }}"
       - name: Run tests
         run: npm test
       - name: Output information
