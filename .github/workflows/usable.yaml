@@ -80,7 +80,7 @@ jobs:
     steps:
       - name: Print deploy output
         run: |
-          echo "${{ needs.build.outputs.result }}"
+          echo "${{ needs.deploy.outputs.result }}"
 
   reports:
     needs: [lint, deploy]
