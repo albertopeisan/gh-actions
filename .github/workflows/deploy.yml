@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - dev
+      - staging
 env:
   ADDRESS: 67.445.667.123.123
   PORT: 80
