@@ -1,4 +1,4 @@
-name: Reusable deploy
+name: Reusable workflow
 on:
   workflow_call:
 jobs:
