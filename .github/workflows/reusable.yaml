@@ -1,10 +1,21 @@
 name: Reusable workflow
 on:
   workflow_call:
+    inputs:
+      artifact-name:
+        description: The name of the deployment artifact file
+        type: string
+        required: true
+        default: dist
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Get Code
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ inputs.artifact-name }}
       - name: Output information
         run: |
+          ls
           echo "Deploying & uploading"
