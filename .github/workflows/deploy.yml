@@ -9,7 +9,7 @@ env:
   PORT: 80
 jobs:
   test:
-    environment: testing
+    environment: production
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -30,6 +30,7 @@ jobs:
       - name: Output information
         run: echo "..."
   deploy:
+    environment: production
     needs: test
     runs-on: ubuntu-latest
     steps:
