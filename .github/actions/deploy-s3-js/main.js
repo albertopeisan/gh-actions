@@ -14,6 +14,8 @@ function run() {
   // You can access github context in the action
   // github.context.
 
+  core.setOutput('bucket-url', 'https://url.com')
+
   core.notice('Hello from my custom javascript action')
 }
 
