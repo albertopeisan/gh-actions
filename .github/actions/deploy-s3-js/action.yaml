@@ -4,7 +4,7 @@ inputs:
   bucket:
     description: 'The s3 bucket name'
     required: true
-  bucket-region:
+  region:
     description: 'The s3 bucket region'
     required: true
   dist-folder:
