@@ -74,5 +74,5 @@ jobs:
         uses: ./.github/actions/deploy-s3-js
         with:
           bucket: 'bucket-name'
-          region: 'eu-west-1'
-          folder: 'dist'
+          bucket-region: 'eu-west-1'
+          dist-folder: 'dist'
