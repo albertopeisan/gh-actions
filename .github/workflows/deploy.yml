@@ -82,4 +82,4 @@ jobs:
           dist-folder: 'dist'
       - name: Print bucket url
         run: |
-          echo "The bucket url is: ${{ steps.deployment.outputs.bucket-url }}
+          echo "The bucket url is: ${{ steps.deployment.outputs.bucket-url }}"
