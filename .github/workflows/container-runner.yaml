@@ -1,0 +1,35 @@
+name: Lint, Test & Deploy on push
+on:
+  push:
+    branches:
+      - main
+permissions:
+  checks: write
+  contents: write
+  issues: write
+jobs:
+  lint:
+    name: Run linters
+    runs-on: ubuntu-latest
+    container:
+      image: node:18
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+      - name: Install dependecies
+        run: |
+          npm ci
+      - name: Lint
+        run: |
+          npm run lint
+      - name: Test
+        run: |
+          npm test
+      - name: Deploy
+        run: |
+          echo "Deploying..."
+      - name: Create issue
+        run: |
+          gh issue create --title "Issue report" --body "something happened." --repo $GITHUB_REPOSITORY
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
