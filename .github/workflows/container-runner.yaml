@@ -1,15 +1,13 @@
-name: Lint, Test & Deploy on container runner
+name: Lint, Test & Deploy on Container runner
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 permissions:
   checks: write
   contents: write
   issues: write
 jobs:
-  lint:
-    name: Run linters
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     container:
       image: node:18

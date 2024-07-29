@@ -1,14 +1,12 @@
-name: Lint, Test & Deploy on ubuntu runner
+name: Lint, Test & Deploy on Ubuntu runner
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 permissions:
   checks: write
   contents: write
   issues: write
 jobs:
-  lint:
+  deploy:
     name: Run linters
     runs-on: ubuntu-latest
     steps:
