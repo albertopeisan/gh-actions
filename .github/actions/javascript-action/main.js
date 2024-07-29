@@ -8,6 +8,8 @@ function run() {
   const bucketRegion = core.getInput('bucket-region', { required: true });
   const distFolder = core.getInput('dist-folder', { required: true });
 
+  core.setOutput('website-url', 'localhost:8000')
+
   exec.exec(`echo folder: ${distFolder}, bucket: ${bucket}, region: ${bucketRegion}`);
 }
 
