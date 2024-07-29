@@ -9,7 +9,7 @@ def run():
     bucket_region = os.environ['INPUT_BUCKET-REGION']
     dist_folder = os.environ['INPUT_DIST-FOLDER']
 
-    print('bucket: {bucket}, region: {bucket_region}, folder: {dist_folder}')
+    print(f'bucket: {bucket}, region: {bucket_region}, folder: {dist_folder}')
 
 if __name__ == '__main__':
     run()

@@ -64,9 +64,6 @@ jobs:
       - name: Deploy site with javascript action
         id: deploy-with-docker
         uses: ./.github/actions/javascript-action
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         with:
           bucket: js-bucket
           dist-folder: ./dist
@@ -90,9 +87,6 @@ jobs:
       - name: Deploy site with docker action
         id: deploy-with-docker
         uses: ./.github/actions/docker-action
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         with:
           bucket: docker-bucket
           dist-folder: ./dist

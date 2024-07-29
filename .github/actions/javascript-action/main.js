@@ -8,7 +8,7 @@ function run() {
   const bucketRegion = core.getInput('bucket-region', { required: true });
   const distFolder = core.getInput('dist-folder', { required: true });
 
-  exec.exec(`echo folder: ${distFolder}, uri: ${s3Uri}, region: ${bucketRegion}`);
+  exec.exec(`echo folder: ${distFolder}, bucket: ${bucket}, region: ${bucketRegion}`);
 }
 
 run();
