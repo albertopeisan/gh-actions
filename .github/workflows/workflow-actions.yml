@@ -11,7 +11,7 @@ jobs:
         id: cache-deps
         uses: ./.github/actions/composite-action
         with:
-          caching: 'false'
+          use-cache: 'false'
       - name: Output information
         run: echo "Cache used? ${{ steps.cache-deps.outputs.used-cache }}"
       - name: Lint code
@@ -86,7 +86,7 @@ jobs:
           path: ./dist
       - name: Output contents
         run: ls
-      - name: Deploy site with docker container
+      - name: Deploy site with docker action
         id: deploy-with-docker
         uses: ./.github/actions/docker-action
         env:
