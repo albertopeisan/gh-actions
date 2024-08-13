@@ -7,7 +7,7 @@ permissions:
   issues: write
 jobs:
   deploy:
-    name: Run linters
+    name: Run linters & deploy
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository

@@ -7,7 +7,7 @@ permissions:
   issues: write
 jobs:
   deploy:
-    name: Deploy
+    name: Run linters & deploy
     runs-on: ubuntu-latest
     container:
       image: node:18
