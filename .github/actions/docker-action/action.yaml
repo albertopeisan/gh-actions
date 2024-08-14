@@ -4,6 +4,10 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
 #  image: 'node:20'
+  args:
+    - ${{ inputs.bucket }}
+    - ${{ inputs.bucket-region }}
+    - ${{ inputs.dist-folder }}
 inputs:
   bucket:
     description: 'The S3 bucket name.'
